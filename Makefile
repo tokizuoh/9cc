@@ -1,8 +1,5 @@
 CFLAGS=-std=c11 -g -static
 
-ssh:
-	./ssh.sh -x
-
 9cc: 9cc.c
 
 test: 9cc
@@ -12,3 +9,6 @@ clean:
 	rm -f 9cc *.o *~ tmp*
 
 .PHONY: test clean
+
+ssh:
+	./ssh.sh -x
