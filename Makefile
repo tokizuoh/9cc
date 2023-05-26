@@ -1,11 +1,14 @@
+CFLAGS=-std=c11 -g -static
+
 ssh:
 	./ssh.sh -x
 
-run:
-	swift 9cc.swift
+9cc: 9cc.c
 
-test:
+test: 9cc
 	./test.sh
 
 clean:
-	rm -f *.o *~ tmp*
+	rm -f 9cc *.o *~ tmp*
+
+.PHONY: test clean
